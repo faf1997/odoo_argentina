@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.form.inherit</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <block name="main_currency_setting_container" position="inside">
+                <setting id="company_currency_on_follow_up" string="Use company currency on Followup" company_dependent="1" help="By default Odoo Follow up will open the debt per currency.
+                If you set this option all the debt will be grouped on one section and using the company currency.">
+                    <field name="use_company_currency_on_followup"/>
+                </setting>
+            </block>
+        </field>
+    </record>
+
+
+</odoo>
